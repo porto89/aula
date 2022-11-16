@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"
+    ></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        (document.querySelectorAll(".notification .delete") || []).forEach(
+          ($delete) => {
+            var $notification = $delete.parentNode;
+            $delete.addEventListener("click", () => {
+              $notification.parentNode.removeChild($notification);
+            });
+          }
+        );
+      });
+    </script>
+
+    <script>
+      var $doc = $("html, body");
+      $(".scrollSuave").click(function () {
+        $doc.animate(
+          {
+            scrollTop: $($.attr(this, "href")).offset().top,
+          },
+          500
+        );
+        return false;
+      });
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+          <div class="navbar-brand">
+            <a class="navbar-item" href="https://bulma.io">
+              <img
+                src="bulma-logo.png"
+                width="112"
+                height="28"
+              />
+            </a>
+          </div>
+
+          <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-end">
+              <div class="navbar-item">
+                <div class="buttons">
+                  <a class="button is-primary is-pulled-right">
+                    <strong>Login</strong>
+                  </a>
+                  <a class="button is-pulled-right"> Cadastrar </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <div class="hero is-small is-primary">
+          <div class="level">
+            <div class="hero-body">
+              <h1 class="title is-8">Título do Banner Hero</h1>
+              <h2 class="subtitle is-5">Subtítulo do Banner Hero</h2>
+
+              <div class="field is-grouped">
+                <p class="control">
+                  <button class="button is-link">Website</button>
+                </p>
+                <p class="control">
+                  <button class="button">Novidades</button>
+                </p>
+                <p class="control">
+                  <button class="button is-danger">Download</button>
+                </p>
+                <p class="control">
+                  <button class="button is-danger">Novidades</button>
+                </p>
+              </div>
+            </div>
+
+            <figure class="image is-4by1">
+              <img src="css.jpg">
+              </figure>
+          </div>
+        </div>
+        <br />
+        <div class="columns">
+          <div class="column">
+            <p class="notification has-background-info">
+              <button class="delete"></button>
+              Lorem ipsum dolor, sir amet consectur adipisicing elit. At maxime
+              voluptate iusto magnam, labore quae ut qui sunt libero laboriosam
+              ab, enim eveniet veniam ullam inventore sequi esse unde. Labore
+            </p>
+          </div>
+          <div class="column">
+            <p class="notification has-background-danger-light">
+              <button class="delete"></button>
+              Lorem ipsum dolor, sir amet consectur adipisicing elit. At maxime
+              voluptate iusto magnam, labore quae ut qui sunt libero laboriosam
+              ab, enim eveniet veniam ullam inventore sequi esse unde. Labore
+            </p>
+          </div>
+          <div class="column">
+            <p class="notification">
+              <button class="delete"></button>
+              Lorem ipsum dolor, sir amet consectur adipisicing elit. At maxime
+              voluptate iusto magnam, labore quae ut qui sunt libero laboriosam
+              ab, enim eveniet veniam ullam inventore sequi esse unde. Labore
+            </p>
+          </div>
+          <div class="column">
+            <p class="notification">
+              <button class="delete"></button>
+              Lorem ipsum dolor, sir amet consectur adipisicing elit. At maxime
+              voluptate iusto magnam, labore quae ut qui sunt libero laboriosam
+              ab, enim eveniet veniam ullam inventore sequi esse unde. Labore
+            </p>
+          </div>
+        </div>
+        <hr />
+        <div class="columns">
+          <div class="caixa">
+            <h2 class="has-text-centered">Menu</h2>
+            <ul>
+              <span class="icon-text has-text-info">
+                <figure class="image is-16x16px">
+                  <img src="item.png">
+                  </figure>
+                <li><a href="#title1">TÍTULO 1</a></li>
+              </span>
+              <span class="icon-text has-text-info">
+                <figure class="image is-16x16px">
+                  <img src="item.png">
+                  </figure>
+                <li><a href="#title2">TÍTULO 2</a></li>
+              </span>
+              <span class="icon-text has-text-info">
+                <figure class="image is-16x16px">
+                  <img src="item.png">
+                  </figure>
+                <li><a href="#title3">TÍTULO 3</a></li>
+              </span>
+              <span class="icon-text has-text-info">
+                <figure class="image is-16x16px">
+                  <img src="item.png">
+                  </figure>
+                <li><a href="#title4">TÍTULO 4</a></li>
+              </span>
+            </ul>
+          </div>
+
+          <div class="column">
+            <section id="title1">
+              <h1 class="title">Título 1</h1>
+            </section>
+            <h2 class="subtitle">Subtítulo</h2>
+
+            <div class="field is-grouped is-grouped-multiline">
+              <div class="control">
+                <div class="tags has-addons">
+                  <span class="tag is-dark">Versão</span>
+                  <span class="tag is-success">1.1</span>
+                </div>
+              </div>
+            </div>
+
+            <p>
+              Lorem ipsum dolor, sir amet consectur adipisicing elit. At maxime
+              voluptate iusto magnam, labore quae ut qui sunt libero laboriosam
+              ab, enim eveniet veniam ullam inventore sequi esse unde. Labore
+            </p>
+
+            <br />
+
+            <div class="columns">
+              <div class="column is-justify-content-left">
+               
+              </div>
+
+              <div class="column is-justify-content-centered">
+                <figure class="image is-128x128">
+                  <img src="https://bulma.io/images/placeholders/128x128.png" />
+                </figure>
+              </div>
+              
+
+              <div class="column is-justify-content-right">
+               
+              </div>
+              <br />
+            </div>
+
+            <br />
+
+            <div class="has-text-justified">
+              <p>
+                Lorem ipsum dolor, sir amet consectur adipisicing elit. At
+                maxime voluptate iusto magnam, labore quae ut qui sunt libero
+                laboriosam ab, enim eveniet veniam ullam inventore sequi esse
+                unde. Labore
+              </p>
+              <p>
+                Lorem ipsum dolor, sir amet consectur adipisicing elit. At
+                maxime voluptate iusto magnam, labore quae ut qui sunt libero
+                laboriosam ab, enim eveniet veniam ullam inventore sequi esse
+                unde. Labore
+              </p>
+              <p>
+                Lorem ipsum dolor, sir amet consectur adipisicing elit. At
+                maxime voluptate iusto magnam, labore quae ut qui sunt libero
+                laboriosam ab, enim eveniet veniam ullam inventore sequi esse
+                unde. Labore
+              </p>
+              <p>
+                Lorem ipsum dolor, sir amet consectur adipisicing elit. At
+                maxime voluptate iusto magnam, labore quae ut qui sunt libero
+                laboriosam ab, enim eveniet veniam ullam inventore sequi esse
+                unde. Labore
+              </p>
+              <p>
+                Lorem ipsum dolor, sir amet consectur adipisicing elit. At
+                maxime voluptate iusto magnam, labore quae ut qui sunt libero
+                laboriosam ab, enim eveniet veniam ullam inventore sequi esse
+                unde. Labore
+              </p>
+              <p>
+                Lorem ipsum dolor, sir amet consectur adipisicing elit. At
+                maxime voluptate iusto magnam, labore quae ut qui sunt libero
+                laboriosam ab, enim eveniet veniam ullam inventore sequi esse
+                unde. Labore
+              </p>
+            </div>
+
+            <a href="#" class="scrollSuave">
+              <button class="button is-rounded">Voltar ao topo</button>
+            </a>
+            <hr />
+
+            <section id="title2">
+              <h1 class="title">Título 2</h1>
+            </section>
+            <h2 class="subtitle">Subtítulo</h2>
+
+            <div class="field is-grouped is-grouped-multiline">
+              <div class="control">
+                <div class="tags has-addons">
+                  <span class="tag is-dark">Versão</span>
+                  <span class="tag is-success">1.1</span>
+                </div>
+              </div>
+            </div>
+
+            <p>
+              Lorem ipsum dolor, sir amet consectur adipisicing elit. At maxime
+              voluptate iusto magnam, labore quae ut qui sunt libero laboriosam
+              ab, enim eveniet veniam ullam inventore sequi esse unde. Labore
+            </p>
+
+            <br />
+            <div class="columns">
+              <div class="column is-justify-content-left">
+                <figure class="image is-128x128">
+                  <img src="https://bulma.io/images/placeholders/128x128.png" />
+                </figure>
+              </div>
+
+              <div class="column is-justify-content-right">
+                <figure class="image is-128x128">
+                  <img src="https://bulma.io/images/placeholders/128x128.png" />
+                </figure>
+              </div>
+              <br />
+            </div>
+            <div class="has-text-justified">
+              <p>
+                Lorem ipsum dolor, sir amet consectur adipisicing elit. At
+                maxime voluptate iusto magnam, labore quae ut qui sunt libero
+                laboriosam ab, enim eveniet veniam ullam inventore sequi esse
+                unde. Labore
+              </p>
+              <p>
+                Lorem ipsum dolor, sir amet consectur adipisicing elit. At
+                maxime voluptate iusto magnam, labore quae ut qui sunt libero
+                laboriosam ab, enim eveniet veniam ullam inventore sequi esse
+                unde. Labore
+              </p>
+              <p>
+                Lorem ipsum dolor, sir amet consectur adipisicing elit. At
+                maxime voluptate iusto magnam, labore quae ut qui sunt libero
+                laboriosam ab, enim eveniet veniam ullam inventore sequi esse
+                unde. Labore
+              </p>
+              <p>
+                Lorem ipsum dolor, sir amet consectur adipisicing elit. At
+                maxime voluptate iusto magnam, labore quae ut qui sunt libero
+                laboriosam ab, enim eveniet veniam ullam inventore sequi esse
+                unde. Labore
+              </p>
+              <p>
+                Lorem ipsum dolor, sir amet consectur adipisicing elit. At
+                maxime voluptate iusto magnam, labore quae ut qui sunt libero
+                laboriosam ab, enim eveniet veniam ullam inventore sequi esse
+                unde. Labore
+              </p>
+              <p>
+                Lorem ipsum dolor, sir amet consectur adipisicing elit. At
+                maxime voluptate iusto magnam, labore quae ut qui sunt libero
+                laboriosam ab, enim eveniet veniam ullam inventore sequi esse
+                unde. Labore
+              </p>
+            </div>
+
+            <a href="#" class="scrollSuave">
+              <button class="button is-rounded">Voltar ao topo</button>
+            </a>
+
+            <hr />
+
+            <section id="title3">
+              <h1 class="title">Título 3</h1>
+            </section>
+            <h2 class="subtitle">Subtítulo</h2>
+
+            <div class="field is-grouped is-grouped-multiline">
+              <div class="control">
+                <div class="tags has-addons">
+                  <span class="tag is-dark">Versão</span>
+                  <span class="tag is-success">1.1</span>
+                </div>
+              </div>
+            </div>
+
+            <p>
+              Lorem ipsum dolor, sir amet consectur adipisicing elit. At maxime
+              voluptate iusto magnam, labore quae ut qui sunt libero laboriosam
+              ab, enim eveniet veniam ullam inventore sequi esse unde. Labore
+            </p>
+
+            <br />
+            <div class="columns">
+              <div class="column is-justify-content-left">
+                <figure class="image is-128x128">
+                  <img src="https://bulma.io/images/placeholders/128x128.png" />
+                </figure>
+              </div>
+
+              <div class="column is-justify-content-centered">
+                <figure class="image is-128x128">
+                  <img src="https://bulma.io/images/placeholders/128x128.png" />
+                </figure>
+              </div>
+              
+
+              <div class="column is-justify-content-right">
+                <figure class="image is-128x128">
+                  <img src="https://bulma.io/images/placeholders/128x128.png" />
+                </figure>
+              </div>
+              <br />
+            </div>
+            <div class="has-text-justified">
+              <p>
+                Lorem ipsum dolor, sir amet consectur adipisicing elit. At
+                maxime voluptate iusto magnam, labore quae ut qui sunt libero
+                laboriosam ab, enim eveniet veniam ullam inventore sequi esse
+                unde. Labore
+              </p>
+              <p>
+                Lorem ipsum dolor, sir amet consectur adipisicing elit. At
+                maxime voluptate iusto magnam, labore quae ut qui sunt libero
+                laboriosam ab, enim eveniet veniam ullam inventore sequi esse
+                unde. Labore
+              </p>
+              <p>
+                Lorem ipsum dolor, sir amet consectur adipisicing elit. At
+                maxime voluptate iusto magnam, labore quae ut qui sunt libero
+                laboriosam ab, enim eveniet veniam ullam inventore sequi esse
+                unde. Labore
+              </p>
+              <p>
+                Lorem ipsum dolor, sir amet consectur adipisicing elit. At
+                maxime voluptate iusto magnam, labore quae ut qui sunt libero
+                laboriosam ab, enim eveniet veniam ullam inventore sequi esse
+                unde. Labore
+              </p>
+              <p>
+                Lorem ipsum dolor, sir amet consectur adipisicing elit. At
+                maxime voluptate iusto magnam, labore quae ut qui sunt libero
+                laboriosam ab, enim eveniet veniam ullam inventore sequi esse
+                unde. Labore
+              </p>
+              <p>
+                Lorem ipsum dolor, sir amet consectur adipisicing elit. At
+                maxime voluptate iusto magnam, labore quae ut qui sunt libero
+                laboriosam ab, enim eveniet veniam ullam inventore sequi esse
+                unde. Labore
+              </p>
+            </div>
+
+            <a href="#" class="scrollSuave">
+              <button class="button is-rounded">Voltar ao topo</button>
+            </a>
+
+            <hr />
+
+            <section id="title4">
+              <h1 class="title">Título 4</h1>
+            </section>
+            <h2 class="subtitle">Subtítulo</h2>
+
+            <div class="field is-grouped is-grouped-multiline">
+              <div class="control">
+                <div class="tags has-addons">
+                  <span class="tag is-dark">Versão</span>
+                  <span class="tag is-success">1.1</span>
+                </div>
+              </div>
+            </div>
+
+            <p>
+              Lorem ipsum dolor, sir amet consectur adipisicing elit. At maxime
+              voluptate iusto magnam, labore quae ut qui sunt libero laboriosam
+              ab, enim eveniet veniam ullam inventore sequi esse unde. Labore
+            </p>
+
+            <br />
+            <div class="columns">
+              <div class="column is-justify-content-left">
+                <figure class="image is-128x128">
+                  <img src="https://bulma.io/images/placeholders/128x128.png" />
+                </figure>
+              </div>
+
+              <div class="column is-justify-content-centered">
+                <figure class="image is-128x128">
+                  <img src="https://bulma.io/images/placeholders/128x128.png" />
+                </figure>
+              </div>
+              
+              <div class="column is-justify-content-centered">
+                <figure class="image is-128x128">
+                  <img src="https://bulma.io/images/placeholders/128x128.png" />
+                </figure>
+              </div>
+              
+
+              <div class="column is-justify-content-right">
+                <figure class="image is-128x128">
+                  <img src="https://bulma.io/images/placeholders/128x128.png" />
+                </figure>
+              </div>
+              <br />
+            </div>
+            <div class="has-text-justified">
+              <p>
+                Lorem ipsum dolor, sir amet consectur adipisicing elit. At
+                maxime voluptate iusto magnam, labore quae ut qui sunt libero
+                laboriosam ab, enim eveniet veniam ullam inventore sequi esse
+                unde. Labore
+              </p>
+              <p>
+                Lorem ipsum dolor, sir amet consectur adipisicing elit. At
+                maxime voluptate iusto magnam, labore quae ut qui sunt libero
+                laboriosam ab, enim eveniet veniam ullam inventore sequi esse
+                unde. Labore
+              </p>
+              <p>
+                Lorem ipsum dolor, sir amet consectur adipisicing elit. At
+                maxime voluptate iusto magnam, labore quae ut qui sunt libero
+                laboriosam ab, enim eveniet veniam ullam inventore sequi esse
+                unde. Labore
+              </p>
+              <p>
+                Lorem ipsum dolor, sir amet consectur adipisicing elit. At
+                maxime voluptate iusto magnam, labore quae ut qui sunt libero
+                laboriosam ab, enim eveniet veniam ullam inventore sequi esse
+                unde. Labore
+              </p>
+              <p>
+                Lorem ipsum dolor, sir amet consectur adipisicing elit. At
+                maxime voluptate iusto magnam, labore quae ut qui sunt libero
+                laboriosam ab, enim eveniet veniam ullam inventore sequi esse
+                unde. Labore
+              </p>
+              <p>
+                Lorem ipsum dolor, sir amet consectur adipisicing elit. At
+                maxime voluptate iusto magnam, labore quae ut qui sunt libero
+                laboriosam ab, enim eveniet veniam ullam inventore sequi esse
+                unde. Labore
+              </p>
+            </div>
+
+            <a href="#" class="scrollSuave">
+              <button class="button is-rounded">Voltar ao topo</button>
+            </a>
+          </div>
+        </div>
+        <footer class="has-background-success has-text-white bottom">
+          <div class="container is-fluid">
+            <div class="columns">
+              <div class="column">
+                <p>@ 2022 Framework Bulma</p>
+              </div>
+              <div class="column has-text-right">
+                <span class="icon-text has-text-info">
+                  <figure class="image is-16x16px">
+                    <img src="facebook.png">
+                    </figure>
+                </span>
+                <span class="icon-text has-text-info">
+                  <figure class="image is-16x16px">
+                    <img src="instagram.png">
+                    </figure>
+                </span>
+                <span class="icon-text has-text-info">
+                  <figure class="image is-16x16px">
+                    <img src="twitter.png">
+                    </figure>
+                </span>
+                
+              </div>
+
+
+              
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

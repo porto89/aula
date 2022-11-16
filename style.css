@@ -1,0 +1,36 @@
+#menu {
+	border-bottom: 1px solid #CCC;
+		margin: 0; padding: 0;
+		float: left;
+		}
+
+#menu ul li {
+	list-style: none; 	
+	padding:3px 5px; 
+	background:#666666;
+	margin-bottom:0px;
+		}
+
+#menu a:link {
+		background: #F5F5F5;
+		color: #666;
+		font-weight: bold;
+		text-decoration: none;
+		padding: 8px;
+		display: block;
+		}
+
+#menu a:hover {
+		background: #E5F0FF;
+		color: #039;
+		}
+
+		.caixa {
+			width: 250px;
+			height: 150px;
+			padding: 10px;
+					background: rgb(115, 176, 245);
+					border: 1px solid #000;
+					
+				}
+
