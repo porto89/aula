@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Consultar Endereço</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"
+    ></script>
+
+    <link rel="stylesheet" href="../static/css/field_group.css" />
+    <link rel="stylesheet" href="../static/css/menubc.css" />
+
+    <script src="../static/js/calendario.js"></script>
+  </head>
+  <body>
+    <nav class="navbar is-transparent is-info">
+      <div class="navbar-brand">
+        <a class="navbar-item">
+          <img
+            src="../static/img/logo.png"
+            alt="Bulma: a modern CSS framework based on Flexbox"
+            width="112"
+            height="28"
+          />
+        </a>
+        <div
+          class="navbar-burger"
+          data-target="navbarExampleTransparentExample"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div id="navbarExampleTransparentExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="index.html"> Início </a>
+        </div>
+        <div class="level-right">
+          <div class="level-item">
+            <script language="javascript" type="text/javascript">
+              document.write(
+                "<h1> Hoje é " +
+                  dia[novo.getDay()] +
+                  ", " +
+                  novo.getDate() +
+                  " de " +
+                  mes[novo.getMonth()] +
+                  " de " +
+                  novo.getFullYear() +
+                  ". </h1>"
+              );
+            </script>
+          </div>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-light" href="login.html"> Entrar </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <br />
+    <div class="columns is-fullheight">
+      <div class="column is-2 is-sidebar-menu is-hidden-mobile">
+        <aside class="menu">
+          <ul class="menu-list">
+            <li>
+              <a class="menu1 panel-heading has-text-white">Cadastrar</a>
+              <ul>
+                <li>
+                  <a href="pessoa.html">Pessoas</a>
+                  <ul>
+                    <li><a href="endereco.html">Endereço</a></li>
+                    <li><a href="telefone.html">Telefone</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="cliente.html">Clientes</a>
+                </li>
+                <li><a href="funcionario.html">Funcionarios</a></li>
+                <li><a href="veiculo.html">Veículos</a></li>
+                <li><a href="estacionamento.html">Estacionamentos</a></li>
+                <li><a href="estada.html">Estadas</a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="menu1 panel-heading has-text-white">Consultar</a>
+              <ul>
+                <li><a href="consultar_cliente.html">Clientes</a></li>
+                <li><a href="consultar_funcionario.html">Funcionarios</a></li>
+                <li><a href="consultar_veiculo.html">Veículos</a></li>
+                <li>
+                  <a href="consultar_estacionamento.html">Estacionamentos</a>
+                </li>
+                <li><a href="consultar_estada.html">Estadas</a></li>
+              </ul>
+            </li>
+          </ul>
+          <hr />
+          <div class="tags has-addons is-centered">
+            <span class="tag is-dark">Versão</span>
+            <span class="tag is-info">1.0.0</span>
+          </div>
+        </aside>
+      </div>
+      <section class="section has-background-link-light">
+        <div class="container">
+          <div class="box" style="width: 1048px; max-width: 100%">
+            <article class="panel is-info">
+              <p class="panel-heading">Consultar Endereços</p>
+              <div class="box">
+                <form id="formListaMaes" action="" method="GET">
+                  <div
+                    class="field is-grouped is-flex is-align-items-center is-flex-wrap-wrap"
+                  >
+                    <label class="label p-2 mt-2">nome do endereço: </label>
+                    <div class="control is-expanded">
+                      <input
+                        class="input"
+                        type="text"
+                        name="buscar"
+                        value=""
+                        placeholder="Digite o nome do endereço"
+                      />
+                      <p class="help is-danger">
+                        O campo nome do endereço é obrigatório!
+                      </p>
+                    </div>
+                    <div class="control">
+                      <button
+                        type="button"
+                        class="button is-link"
+                        onclick="geraPdf('', 'formListaPlaca');"
+                      >
+                        Buscar
+                      </button>
+                    </div>
+                  </div>
+                </form>
+
+                <button class="button is-small is-danger">Excluir</button>
+
+                <div class="table">
+                  <table
+                    class="table is-table is-bordered is-striped is-narrow is-hoverable is-fullwidth"
+                  >
+                    <thead>
+                      <tr>
+                        <th>
+                          <input
+                            type="checkbox"
+                            name="select_all"
+                            value="1"
+                            id="examplo-selecionar-todos"
+                          />
+                        </th>
+                        <th class="has-text-centered">Rua</th>
+                        <th class="has-text-centered">Numero</th>
+                        <th class="has-text-centered">CEP</th>
+                        <th class="has-text-centered">Complemento</th>
+                        <th class="has-text-centered">Bairro</th>
+                        <th class="has-text-centered">Cidade</th>
+                        <th class="has-text-centered">Estado</th>
+                        <th class="has-text-centered">Ações</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>rua pedro americo</td>
+                        <td>302</td>
+                        <td>97110-000</td>
+                        <td>casa</td>
+                        <td>camobi</td>
+                        <td>santa maria</td>
+                        <td>RS</td>
+
+                        <td class="has-text-centered">
+                          <button class="button is-small is-danger is-outlined">
+                            <span>Delete</span>
+                            <span class="icon is-small">
+                              <i class="fas fa-times"></i>
+                            </span>
+                          </button>
+                          <button class="button is-small is-info is-outlined">
+                            <span>Editar</span>
+                            <span class="icon is-small">
+                              <i class="fas fa-edit"></i>
+                            </span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox" /></td>
+                        <td>rua oito de junho</td>
+                        <td>1000</td>
+                        <td>91256-000</td>
+                        <td>apartamento</td>
+                        <td>camobi</td>
+                        <td>santa maria</td>
+                        <td>RS</td>
+                        <td class="has-text-centered">
+                          <button class="button is-small is-danger is-outlined">
+                            <span>Delete</span>
+                            <span class="icon is-small">
+                              <i class="fas fa-times"></i>
+                            </span>
+                          </button>
+                          <button class="button is-small is-info is-outlined">
+                            <span>Editar</span>
+                            <span class="icon is-small">
+                              <i class="fas fa-edit"></i>
+                            </span>
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <nav
+                    class="pagination is-small"
+                    role="navigation"
+                    aria-label="pagination"
+                  >
+                    <ul class="pagination-list">
+                      <li>
+                        <a class="pagination-link" aria-label="Goto page 1"
+                          >1</a
+                        >
+                      </li>
+                      <li>
+                        <a class="pagination-link" aria-label="Goto page 1"
+                          >2</a
+                        >
+                      </li>
+                      <li>
+                        <a class="pagination-link" aria-label="Goto page 1"
+                          >3</a
+                        >
+                      </li>
+                      <li>
+                        <a class="pagination-link" aria-label="Goto page 1"
+                          >5</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="pagination-link is-current"
+                          aria-label="Page 31"
+                          aria-current="page"
+                          >46</a
+                        >
+                      </li>
+                      <li>
+                        <a class="pagination-link" aria-label="Goto page 31"
+                          >31</a
+                        >
+                      </li>
+                      <li>
+                        <span class="pagination-ellipsis">&hellip;</span>
+                      </li>
+                      <li>
+                        <a class="pagination-link" aria-label="Goto page 65"
+                          >65</a
+                        >
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+                <h2>Não existem endereços cadastradas!</h2>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer has-background-info-dark p-5">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-2 has-text-white">© 2022 Estcionamento</div>
+          <div class="column is-8"></div>
+          <div class="column is-2 has-text-centered">
+            <span class="icon has-text-warning">
+              <i class="fab fa-facebook-square fa-2x mr-2"></i>
+              <i class="fab fa-twitter-square fa-2x mr-2"></i>
+              <i class="fab fa-instagram-square fa-2x mr-2"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script>
+    const fileInput = document.querySelector(
+      "#file-js-example input[type=file]"
+    );
+    fileInput.onchange = () => {
+      if (fileInput.files.length > 0) {
+        const fileName = document.querySelector("#file-js-example .file-name");
+        fileName.textContent = fileInput.files[0].name;
+      }
+    };
+  </script>
+</html>

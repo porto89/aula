@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Inicio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"
+    ></script>
+
+    <link rel="stylesheet" href="../static/css/field_group.css" />
+    <link rel="stylesheet" href="../static/css/menubc.css" />
+
+    <script src="../static/js/calendario.js"></script>
+  </head>
+  <body>
+    <nav class="navbar is-transparent is-info">
+      <div class="navbar-brand">
+        <a class="navbar-item">
+          <img
+            src="../static/img/logo.png"
+            alt="Bulma: a modern CSS framework based on Flexbox"
+            width="112"
+            height="28"
+          />
+        </a>
+        <div
+          class="navbar-burger"
+          data-target="navbarExampleTransparentExample"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div id="navbarExampleTransparentExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item"> Início </a>
+        </div>
+        <div class="level-right">
+          <div class="level-item">
+            <script language="javascript" type="text/javascript">
+              document.write(
+                "<h1> Hoje é " +
+                  dia[novo.getDay()] +
+                  ", " +
+                  novo.getDate() +
+                  " de " +
+                  mes[novo.getMonth()] +
+                  " de " +
+                  novo.getFullYear() +
+                  ". </h1>"
+              );
+            </script>
+          </div>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a href="login.html" class="button is-light"> Entrar </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <br />
+    <div class="columns is-fullheight">
+      <div class="column is-2 is-sidebar-menu is-hidden-mobile">
+        <aside class="menu">
+          <ul class="menu-list">
+            <li>
+              <a class="menu1 panel-heading has-text-white">Cadastrar</a>
+              <ul>
+                <li class="nav-item me-3 me-lg-0">
+                  <a class="nav-link text-white" href="cliente.html">
+                    <img
+                      src="/static/img/account.png"
+                      alt="An example icon"
+                      style="width: 24px; height: 24px"
+                    />
+                    Clientes</a
+                  >
+                </li>
+                <li class="nav-item me-3 me-lg-0">
+                  <a class="nav-link text-white" href="funcionario.html">
+                    <img
+                      src="/static/img/account-tie (1).png"
+                      alt="An example icon"
+                      style="width: 24px; height: 24px"
+                    />
+                    Funcionarios</a
+                  >
+                </li>
+
+                <li class="nav-item me-3 me-lg-0">
+                  <a class="nav-link text-white" href="veiculo.html">
+                    <img
+                      src="/static/img/bed-double.png"
+                      alt="An example icon"
+                      style="width: 24px; height: 24px"
+                    />
+                    Veículos</a
+                  >
+                </li>
+                <li class="nav-item me-3 me-lg-0">
+                  <a class="nav-link text-white" href="estacionamento.html">
+                    <img
+                      src="/static/img/car-parking-lights.png"
+                      alt="An example icon"
+                      style="width: 24px; height: 24px"
+                    />
+                    Estacionamentos</a
+                  >
+                </li>
+                <li class="nav-item me-3 me-lg-0">
+                  <a class="nav-link text-white" href="estada.html">
+                    <img
+                      src="/static/img/boom-gate-up.png"
+                      alt="An example icon"
+                      style="width: 24px; height: 24px"
+                    />
+                    Estadas</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a class="menu1 panel-heading has-text-white">Consultar</a>
+              <ul>
+                <li class="nav-item me-3 me-lg-0">
+                  <a class="nav-link text-white" href="consultar_cliente.html">
+                    <img
+                      src="/static/img/account.png"
+                      alt="An example icon"
+                      style="width: 24px; height: 24px"
+                    />
+                    Clientes</a
+                  >
+                </li>
+                <li class="nav-item me-3 me-lg-0">
+                  <a
+                    class="nav-link text-white"
+                    href="consultar_funcionario.html"
+                  >
+                    <img
+                      src="/static/img/account-tie (1).png"
+                      alt="An example icon"
+                      style="width: 24px; height: 24px"
+                    />
+                    Funcionarios</a
+                  >
+                </li>
+
+                <li class="nav-item me-3 me-lg-0">
+                  <a class="nav-link text-white" href="consultar_veiculo.html">
+                    <img
+                      src="/static/img/bed-double.png"
+                      alt="An example icon"
+                      style="width: 24px; height: 24px"
+                    />
+                    Veículos</a
+                  >
+                </li>
+                <li class="nav-item me-3 me-lg-0">
+                  <a
+                    class="nav-link text-white"
+                    href="consultar_estacionamento.html"
+                  >
+                    <img
+                      src="/static/img/car-parking-lights.png"
+                      alt="An example icon"
+                      style="width: 24px; height: 24px"
+                    />
+                    Estacionamentos</a
+                  >
+                </li>
+                <li class="nav-item me-3 me-lg-0">
+                  <a class="nav-link text-white" href="consultar_estada.html">
+                    <img
+                      src="/static/img/boom-gate-up.png"
+                      alt="An example icon"
+                      style="width: 24px; height: 24px"
+                    />
+                    Estadas</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <hr />
+          <div class="tags has-addons is-centered">
+            <span class="tag is-dark">Versão</span>
+            <span class="tag is-info">1.0.0</span>
+          </div>
+        </aside>
+      </div>
+
+      <section class="section is-main-section">
+        <div class="tile is-ancestor">
+          <div class="tile is-parent">
+            <div class="card tile is-child">
+              <div class="card-content">
+                <div class="level is-mobile">
+                  <div class="level-item">
+                    <div class="is-widget-label">
+                      <h3 class="subtitle is-spaced">Clientes</h3>
+                      <h1 class="title">30</h1>
+                    </div>
+                  </div>
+                  <div class="level-item has-widget-icon">
+                    <div class="is-widget-icon">
+                      <span class="icon has-text-primary is-large"
+                        ><i class="mdi mdi-account-multiple mdi-48px"></i
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tile is-parent">
+            <div class="card tile is-child">
+              <div class="card-content">
+                <div class="level is-mobile">
+                  <div class="level-item">
+                    <div class="is-widget-label">
+                      <h3 class="subtitle is-spaced">Total</h3>
+                      <h1 class="title">R$ 2.562,25</h1>
+                    </div>
+                  </div>
+                  <div class="level-item has-widget-icon">
+                    <div class="is-widget-icon">
+                      <span class="icon has-text-info is-large"
+                        ><i class="mdi mdi-cart-outline mdi-48px"></i
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer has-background-info-dark p-5">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-2 has-text-white">© 2022 Estcionamento</div>
+          <div class="column is-8"></div>
+          <div class="column is-2 has-text-centered">
+            <span class="icon has-text-warning">
+              <i class="fab fa-facebook-square fa-2x mr-2"></i>
+              <i class="fab fa-twitter-square fa-2x mr-2"></i>
+              <i class="fab fa-instagram-square fa-2x mr-2"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script>
+    const fileInput = document.querySelector(
+      "#file-js-example input[type=file]"
+    );
+    fileInput.onchange = () => {
+      if (fileInput.files.length > 0) {
+        const fileName = document.querySelector("#file-js-example .file-name");
+        fileName.textContent = fileInput.files[0].name;
+      }
+    };
+  </script>
+</html>

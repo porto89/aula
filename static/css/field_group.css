@@ -1,0 +1,25 @@
+@media screen and (min-width: 769px), print {
+        .field-group {
+          display: flex;
+        }
+
+        .field-group > .field:not(:first-child) {
+          margin-left: 0.75rem;
+        }
+
+        .field-group > .field:not(:last-child) {
+          margin-right: 0.75rem;
+        }
+
+        .field-group > .field {
+          flex: 1 1 0;
+        }
+
+        .field-group:last-child > .field {
+          margin-bottom: 0;
+        }
+      }
+
+      .field-group:not(:last-child) > .field {
+        margin-bottom: 0.75rem;
+      }
